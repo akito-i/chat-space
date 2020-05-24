@@ -1,0 +1,25 @@
+.chat-main
+  .chat-main__groups
+    .wrapper-second
+      .wrapper-sub
+        .groups-name akito
+        .user-name Member:akito  
+      .wrapper-sub__second
+        .groups-edit  Edit
+       
+
+       
+
+
+
+
+
+  .chat-main__form
+    .wrapper-fourth
+      %input.input-box{:name => "message[content]", :placeholder => "  type a message", :type => "text"}/
+
+      %label{class: "input-box__image"}
+        %i.fas.fa-image.fa-lg 
+        %input.select-file{type: "file"}
+
+    %input.send-btn{:type => "submit",:value => "Send"}/
