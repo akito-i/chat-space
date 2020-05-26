@@ -1,10 +1,12 @@
 .side-bar
-  .side-bar__user
+  .side-bar__user     
     .user 
-      .name akito
+      .name
+        =current_user.name
       .icon 
         = link_to "#" do
           %i.fa.fa-edit
+        =link_to edit_user_path(current_user) do  
           %i.fa.fa-cog
 
   .side-bar__message__first
