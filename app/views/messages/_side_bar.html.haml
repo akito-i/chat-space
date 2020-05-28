@@ -4,18 +4,16 @@
       .name
         =current_user.name
       .icon 
-        = link_to "#" do
+        = link_to new_group_path do
           %i.fa.fa-edit
         =link_to edit_user_path(current_user) do  
           %i.fa.fa-cog
 
   .side-bar__message__first
-    .wrapper-third
-      .name-first akito
-      .message-date 2019/11/20
-    .message-first おはよう！
-  .side-bar__message__second
-    .wrapper-third
-      .name-first akito
-      .message-date 2019/11/20
-    .message-first おはよう！          
+    - current_user.groups.each do |group|
+      .wrapper-third
+        = link_to '#' do
+          .name-first
+            = group.name
+          .message-date 2019/11/20
+        .message-first メッセージはまだありません。
