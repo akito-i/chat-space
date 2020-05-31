@@ -37,7 +37,12 @@
   display: flex;
   margin-bottom: 12px;
   margin-left: 40px;
-  color:#ffffff
+  color:#ffffff;
+}
+
+.wrapper-third > a {
+  text-decoration:none;
+  color:#ffffff;
 }
 
 .name-first{
@@ -168,10 +173,10 @@
   justify-content: space-between;
 }
 
-.input-box{
+.form__message{
  border-style: none;
  width:825px;
- 
+ margin-top: 10px;
 }
 
 .fas.fa-image.fa-lg{
@@ -188,4 +193,9 @@
   height: 50px;
   width:100px;
   color: #ffffff;
+}
+
+.wrapper-fifth {
+  display:flex;
+  justify-content: space-between;
 }

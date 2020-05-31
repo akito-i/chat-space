@@ -12,8 +12,8 @@
   .side-bar__message__first
     - current_user.groups.each do |group|
       .wrapper-third
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .name-first
             = group.name
-          .message-date 2019/11/20
-        .message-first メッセージはまだありません。
+        .message-first
+          = group.show_last_message

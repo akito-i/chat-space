@@ -2,13 +2,20 @@
   .chat-main__groups
     .wrapper-second
       .wrapper-sub
-        .groups-name akito
-        .user-name Member:akito  
+        .groups-name
+          = @group.name
+        .user-name 
+          Members
+          - @group.users.each do |user|
+            = user.name
       .wrapper-sub__second
-        .groups-edit  Edit
+        .groups-edit  
+          = link_to edit_group_path(@group.id) do
+            Edit
        
 
-       
+  .messages
+    = render @messages    
 
 
 
@@ -16,10 +23,16 @@
 
   .chat-main__form
     .wrapper-fourth
-      %input.input-box{name: "message[content]", placeholder: "  type a message", type: "text"}/
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: '  type a message'
+        
+        .wrapper-fifth   
+          -# %label{class: "input-box__image"}
+          = f.label :image, class: 'input-box__image' do
+            -# %i.fas.fa-image.fa-lg 
+            = icon('fas', 'image', class: 'fas.fa-image.fa-lg')
+            -# %input.select-file{type: "file"}
+            = f.file_field :image, class: 'select-file'
 
-      %label{class: "input-box__image"}
-        %i.fas.fa-image.fa-lg 
-        %input.select-file{type: "file"}
-
-    %input.send-btn{type: "submit",value: "Send"}/
+            -# %input.send-btn{type: "submit",value: "Send"}/
+            = f.submit 'Send', class: 'send-btn'
