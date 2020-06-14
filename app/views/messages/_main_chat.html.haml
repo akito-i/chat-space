@@ -24,15 +24,10 @@
   .chat-main__form
     .wrapper-fourth
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: '  type a message'
-        
+        = f.text_field :content, class: 'form__message', placeholder: '  type a message'        
         .wrapper-fifth   
-          -# %label{class: "input-box__image"}
           = f.label :image, class: 'input-box__image' do
-            -# %i.fas.fa-image.fa-lg 
-            = icon('fas', 'image', class: 'fas.fa-image.fa-lg')
-            -# %input.select-file{type: "file"}
-            = f.file_field :image, class: 'select-file'
-
-            -# %input.send-btn{type: "submit",value: "Send"}/
-            = f.submit 'Send', class: 'send-btn'
+            = icon('fas', 'image', id: 'image-icon')
+            = f.file_field :image, class: 'select-file' 
+        .new-wrapper       
+          = f.submit 'Send', class: 'send-btn'
