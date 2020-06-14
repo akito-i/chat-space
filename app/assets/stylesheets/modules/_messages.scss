@@ -108,6 +108,11 @@
   position:relative;
 }
 
+.messages{
+  height: calc(100vh - 190px);
+  overflow: scroll;
+}
+
 // メインのヘッダー
 
 .chat-main__groups{
@@ -165,22 +170,25 @@
 }
 
 .wrapper-fourth{
-  background-color: white;
-  width:calc(100% - 195px);
+  
   height:50px;
   margin:20 15 20 40;
+  
+}
+
+.new_message{
   display:flex;
   justify-content: space-between;
 }
 
 .form__message{
  border-style: none;
- width:825px;
- margin-top: 10px;
+background-color: white;
+ height:50px;
+ width:900px;
 }
 
-.fas.fa-image.fa-lg{
-  margin-right: 10px;
+#image-icon{
   line-height: 50px;
 }
 
@@ -193,9 +201,20 @@
   height: 50px;
   width:100px;
   color: #ffffff;
+ 
+
 }
 
+
+
 .wrapper-fifth {
-  display:flex;
-  justify-content: space-between;
+ width:40px;
+ border:0;
+ margin:0;
+ background-color: white;
+ 
+}
+
+.new-wrapper{
+  margin-left: 30px;
 }
