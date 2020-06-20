@@ -1,6 +1,4 @@
 $(function(){ 
-  var last_message_id = $('.message:last').data("message-id");
-  console.log(last_message_id);
   function buildHTML(message){
    if ( message.image ) {
      var html =
@@ -81,9 +79,7 @@ $('#new_message').on('submit', function(e){
         insertHTML += buildHTML(message)
       });
       $('.messages').append(insertHTML);
-      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     }
-    console.log('success');
   })
   .fail(function() {
     alert('error');
