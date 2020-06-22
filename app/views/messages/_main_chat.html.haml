@@ -24,6 +24,7 @@
   .chat-main__form
     .wrapper-fourth
       = form_for [@group, @message] do |f|
+        .aaa
         = f.text_field :content, class: 'form__message', placeholder: '  type a message'        
         .wrapper-fifth   
           = f.label :image, class: 'input-box__image' do

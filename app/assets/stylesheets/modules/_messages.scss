@@ -4,6 +4,7 @@
 
 .wrapper{
   display:flex;
+ 
 }
 
 // サイドのヘッダー
@@ -30,24 +31,27 @@
 }
 
 .side-bar__message__first{
-  margin-top: 35px;
+  margin-top: 20px;
+ 
 }
 
 .wrapper-third{
   display: flex;
-  margin-bottom: 12px;
-  margin-left: 40px;
+  margin-bottom: 40px;
+  margin-left: 20px;
   color:#ffffff;
+  text-align: left;
 }
 
 .wrapper-third > a {
   text-decoration:none;
   color:#ffffff;
+  
 }
 
 .name-first{
  margin-right: 5px;
- font-size: 16px;
+ font-size: 15px;
 }
 
 .message-date{
@@ -57,8 +61,8 @@
 
 .message-first{
   color:#ffffff;
-  font-size:14px;
-  margin-left:40px;
+  font-size:11px;
+  margin-top: 5px;
 }
 
 .side-bar__message__second{
@@ -111,6 +115,27 @@
 .messages{
   height: calc(100vh - 190px);
   overflow: scroll;
+  margin-left: 40px;
+  margin-top: 35px;
+}
+
+.upper-message__user-name{
+  margin-bottom: 12px;
+  color:#333333;
+  font-size: 16px;
+  display: flex;
+}
+
+.upper-message__date{
+  color: #999999;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.lower-message p{
+  color:#434A54;
+  font-size: 14px;
+  margin-bottom:46px ;
 }
 
 // メインのヘッダー
@@ -173,13 +198,13 @@
  align-items: center;
  display:flex;
  bottom: 0;
+ display: inline-block;
 }
 
 .wrapper-fourth{
   
   height:50px;
-  margin:20 15 20 40;
-  
+  margin:20 40 20 40;
 }
 
 .new_message{
@@ -187,15 +212,20 @@
   justify-content: space-between;
 }
 
+.input-box__image{
+ border-left: 10px;
+}
+
 .form__message{
  border-style: none;
 background-color: white;
  height:50px;
- width:900px;
+ width:9300px;
 }
 
 #image-icon{
   line-height: 50px;
+  margin-right: 10px;
 }
 
 .select-file{
@@ -211,16 +241,14 @@ background-color: white;
 
 }
 
-
-
 .wrapper-fifth {
  width:40px;
  border:0;
  margin:0;
  background-color: white;
- 
 }
 
 .new-wrapper{
-  margin-left: 30px;
+  margin-left: 15px;
+  // margin-right: 40px;
 }
